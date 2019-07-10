@@ -1,1 +1,51 @@
-/* starter */
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homescreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    font: black;
+    font-size: 72px;
+    margin: 50px;
+    height: 300px;
+}
+
+.button {
+    text-align: center;
+    font: black;
+    font-size: 18px;
+    border: solid black 2px;
+}
+
+.one-title {
+    text-align: center;
+    font: black;
+    font-size: 36px;
+}
+
+.game-board {
+    height: 500px;
+    width: 500px;
+    border: solid black 2px;
+    margin: 0 auto;
+    position: relative;
+}

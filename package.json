@@ -1,0 +1,29 @@
+{
+  "name": "attack-of-the-slime",
+  "version": "1.0.0",
+  "description": "control the slime to fill the spaces and eat the human",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "fix-all": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlendle11/attack-of-the-slime.git"
+  },
+  "keywords": [
+    "slime"
+  ],
+  "author": "Justin Lendle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlendle11/attack-of-the-slime/issues"
+  },
+  "homepage": "https://github.com/jlendle11/attack-of-the-slime#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0"
+  }
+}
