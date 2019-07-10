@@ -10,6 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* gif source: davidkanigan.com/author/davidkanigan/ */
+    background-image: url("https://media.giphy.com/media/QPsEnRasf0Vfa/giphy.gif");
+    background-size: cover;
+}
+
+.one-home {
+    /* background-image: url("images/way.png"); */
+    background-size: cover;
 }
 
 .home {
@@ -29,12 +37,12 @@ body {
     height: 300px;
 }
 
-.button {
+/* .button {
     text-align: center;
     font: black;
     font-size: 18px;
     border: solid black 2px;
-}
+} */
 
 .one-title {
     text-align: center;
@@ -48,4 +56,76 @@ body {
     border: solid black 2px;
     margin: 0 auto;
     position: relative;
+    /* img-source: https://opengameart.org/content/street-view */
+    background-image: url("images/way.png");
+}
+
+.slime {
+    width: 100px;
+    height: 100px;
+    /* img-source: https://opengameart.org/content/purple-slime-blob */
+    background-image: url('images/purpleblobstill.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+}
+
+.car {
+    width: 100px;
+    height: 100px;
+    /* img-source: https://opengameart.org/content/isometric-pixel-art-car */
+    background-image: url('images/car.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 100%;
+}
+
+.human {
+    width: 100px;
+    height: 100px;
+    /* img source: https://opengameart.org/content/npc-monks */
+    background-image: url('images/monks.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 100%;
+}
+/* Source for all button CSS below: https://www.bestcssbuttongenerator.com/#/18  */
+.myButton {
+	-moz-box-shadow: 3px 4px 0px 0px #9fb4f2;
+	-webkit-box-shadow: 3px 4px 0px 0px #9fb4f2;
+	box-shadow: 3px 4px 0px 0px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+	background-color:#476e9e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
