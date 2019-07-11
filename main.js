@@ -4,6 +4,9 @@ const cars = [
     { x: 3, y: 1},
     { x: 3, y: 2}
 ]
+const restart = function() {
+	window.location.reload();
+}
 
 function createCars() {
     for (const car of cars) {
@@ -84,19 +87,31 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        setTimeout(function() { alert('You win!!!! wow!!!!')}, 300)
+        if (document.querySelectorAll('.slime').length >= 23) {
+            setTimeout(function() { alert('You win!!!! wow!!!!')}, 300)
+        } else {
+            setTimeout(function() { alert('You did not cover the whole area so the humans were able to defeat you.')}, 100)
+            setTimeout(function(){ 
+                const retry = confirm('Would you like to try again?')
+                
+                if (retry == true) {
+                    restart()
+                }
+            }, 200)
+        }
     }
+    // if (isSlimeThere(x, y)) {
+    //     alert('Game Over')
+    // }
 }
 
-// const winAl = function() {
-    
-// }
 
 function moveLeft() {
     if (canMoveTo(slime.x - 1, slime.y)) {
         const trail = document.querySelector('.slime')
-        const cln = trail.cloneNode(false)
-        document.querySelector('.game-board').appendChild(cln)
+        const clone = trail.cloneNode(false)
+        clone.id = 'clone'
+        document.querySelector('.game-board').appendChild(clone)
         slime.x -= 1
         moveSlime(slime.x, slime.y)
     }
@@ -105,8 +120,9 @@ function moveLeft() {
 function moveUp() {
     if (canMoveTo(slime.x, slime.y - 1)) {
         const trail = document.querySelector('.slime')
-        const cln = trail.cloneNode(false)
-        document.querySelector('.game-board').appendChild(cln)
+        const clone = trail.cloneNode(false)
+        clone.id = 'clone'
+        document.querySelector('.game-board').appendChild(clone)
         slime.y -= 1
         moveSlime(slime.x, slime.y)
     }
@@ -115,8 +131,9 @@ function moveUp() {
 function moveRight() {
     if (canMoveTo(slime.x + 1, slime.y)) {
         const trail = document.querySelector('.slime')
-        const cln = trail.cloneNode(false)
-        document.querySelector('.game-board').appendChild(cln)
+        const clone = trail.cloneNode(false)
+        clone.id = 'clone'
+        document.querySelector('.game-board').appendChild(clone)
         slime.x += 1
         moveSlime(slime.x, slime.y)
     }
@@ -125,8 +142,9 @@ function moveRight() {
 function moveDown() {
     if (canMoveTo(slime.x, slime.y + 1)) {
         const trail = document.querySelector('.slime')
-        const cln = trail.cloneNode(false)
-        document.querySelector('.game-board').appendChild(cln)
+        const clone = trail.cloneNode(false)
+        clone.id = 'clone'
+        document.querySelector('.game-board').appendChild(clone)
         slime.y += 1
         moveSlime(slime.x, slime.y)
     }
@@ -153,6 +171,10 @@ document.body.addEventListener('keydown', function(evt) {
             
     }
 })
+
+const replay = function() {
+
+}
 
 function runGame() {
     createCars()

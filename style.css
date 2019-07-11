@@ -72,6 +72,10 @@ body {
     background-size: cover;
 }
 
+#clone {
+    background-image: url('images/purp-puddle.png');
+}
+
 .car {
     width: 100px;
     height: 100px;
