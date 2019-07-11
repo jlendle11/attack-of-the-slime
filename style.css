@@ -19,6 +19,7 @@ body {
     /* gif source: https://giphy.com/gifs/video-games-videogames-professorlightwav-26gQc8wnaYfMtqbxm */
     background-image: url("https://media0.giphy.com/media/26gQc8wnaYfMtqbxm/giphy.gif?cid=790b76115d266cca4b756744326b96d5&rid=giphy.gif");
     background-size: 1440px 740px;
+    background-color: black;
     background-repeat: no-repeat;
 }
 
@@ -31,25 +32,41 @@ body {
     min-height: 100vh;
 }
 
-.title {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 72px;
-    margin: 50px;
-    height: 300px;
+@font-face {
+    /* font-source: https://www.dafont.com/lethal-slime.font */
+    font-family: slime;
+    src: url(images/Lethal\ Slime.ttf);
 }
 
-/* .button {
+.title {
+    font-family: slime;
     text-align: center;
-    font: black;
-    font-size: 18px;
-    border: solid black 2px;
-} */
+    color: #427E33;
+    font-size: 72px;
+    margin: 50px;
+    height: 500px;
+}
+.home-footer {
+    height: 40px;
+}
 
+.home-footer-text {
+    color: whitesmoke;
+    font-size: 18px;
+}
+@font-face {
+    /* font-source: https://www.dafont.com/cf-night-of-terror.font */
+    font-family: blood;
+    src: url('images/cf_night_of_terror/CFNightofTerrorPERSONAL-Reg.ttf')
+}
 .one-title {
+    border: solid crimson 2px;
+    font-family: blood;
     text-align: center;
-    color: tomato;
+    color: crimson;
     font-size: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .game-board {
@@ -73,6 +90,8 @@ body {
 }
 
 #clone {
+    /* img-source: https://opengameart.org/content/puddle-corpses */
+    /* photoshopped by myself to change colors */
     background-image: url('images/purp-puddle.png');
 }
 
@@ -95,6 +114,23 @@ body {
     position: absolute;
     background-size: 100%;
 }
+
+.info {
+    font-family: blood;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.return-home {
+    font-family: blood;
+    color: crimson;
+    text-align: center;
+    border: solid crimson 2px;
+    margin-top: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 /* Source for all button CSS below: https://www.bestcssbuttongenerator.com/#/18  */
 .myButton {
 	-moz-box-shadow: 3px 4px 0px 0px #9fb4f2;
@@ -105,7 +141,7 @@ body {
 	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
 	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
 	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, black 5%, #476e9e 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
 	background-color:#7892c2;
 	-moz-border-radius:18px;
@@ -114,8 +150,8 @@ body {
 	border:1px solid #4e6096;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
-	font-family:Times New Roman;
+	color:#427E33;
+	font-family: blood;
 	font-size:17px;
 	padding:7px 25px;
 	text-decoration:none;

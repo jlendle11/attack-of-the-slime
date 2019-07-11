@@ -40,7 +40,9 @@ const isHuman = function(x, y) {
 }
 
 const isSlimeThere = function(x, y) {
-    if (slime.x == x && slime.y == y) {
+    const cln = document.querySelectorAll('#clone')
+
+    if (cln.x == x && cln.y == y) {
         return true
     }
     return false
@@ -77,6 +79,9 @@ const canMoveTo = function(x, y) {
     if (carAtLoc(x, y)) {
         return false
     }
+    // if (isSlimeThere(x, y)) {
+    //     return false
+    // }
     return true
 }
 
@@ -87,8 +92,17 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        if (document.querySelectorAll('.slime').length >= 23) {
-            setTimeout(function() { alert('You win!!!! wow!!!!')}, 300)
+        if (document.querySelectorAll('.slime').length == 23) {
+            setTimeout(function() { alert('You have consumed the whole block. Next step, the world. Congats.')}, 100)
+        } else if (document.querySelectorAll('.slime').length > 23) {
+            setTimeout(function() { alert('You ate the human but also ate your own toxic self. You are dead.')}, 100)
+            setTimeout(function(){ 
+                const retry = confirm('Would you like to try again?')
+                
+                if (retry == true) {
+                    restart()
+                }
+            }, 200)
         } else {
             setTimeout(function() { alert('You did not cover the whole area so the humans were able to defeat you.')}, 100)
             setTimeout(function(){ 
@@ -114,6 +128,7 @@ function moveLeft() {
         document.querySelector('.game-board').appendChild(clone)
         slime.x -= 1
         moveSlime(slime.x, slime.y)
+
     }
 }
 
