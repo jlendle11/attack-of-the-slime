@@ -10,14 +10,16 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* gif source: davidkanigan.com/author/davidkanigan/ */
-    background-image: url("https://media.giphy.com/media/QPsEnRasf0Vfa/giphy.gif");
-    background-size: cover;
+    /* gif source: threechainlinks.tumblr.com/post/79519642317 */
+    background-image: url("https://media2.giphy.com/media/lFdorDl2MisYo/giphy.gif?cid=790b76115d266878436b424d36b0aa05&rid=giphy.gif");
+    background-size: 1440px 740px;
 }
 
 .one-home {
-    /* background-image: url("images/way.png"); */
-    background-size: cover;
+    /* gif source: https://giphy.com/gifs/video-games-videogames-professorlightwav-26gQc8wnaYfMtqbxm */
+    background-image: url("https://media0.giphy.com/media/26gQc8wnaYfMtqbxm/giphy.gif?cid=790b76115d266cca4b756744326b96d5&rid=giphy.gif");
+    background-size: 1440px 740px;
+    background-repeat: no-repeat;
 }
 
 .home {
@@ -31,7 +33,7 @@ body {
 
 .title {
     text-align: center;
-    font: black;
+    color: whitesmoke;
     font-size: 72px;
     margin: 50px;
     height: 300px;
@@ -46,7 +48,7 @@ body {
 
 .one-title {
     text-align: center;
-    font: black;
+    color: tomato;
     font-size: 36px;
 }
 
