@@ -7,6 +7,34 @@ const cars = [
 const restart = function() {
 	window.location.reload();
 }
+//Tutorial for fade effect: "https://christopheraue.net/design"
+fadeInPage()
+function fadeInPage() {
+    const fader = document.getElementById('fader')
+    fader.classList.add('fade-out')
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let anchors = document.getElementsByTagName('a')
+    for (let idx=0; idx<anchors.length; idx+=1) {
+        if (anchors[idx].hostname !== window.location.hostname) {
+            continue
+        }
+        anchors[idx].addEventListener('click', function(event) {
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href
+                fader.removeEventListener('animationend', listener)
+            };
+            fader.addEventListener('animationend', listener)
+            
+            event.preventDefault();
+            fader.classList.add('fade-in')
+        })
+    }
+})
 
 function createCars() {
     for (const car of cars) {
