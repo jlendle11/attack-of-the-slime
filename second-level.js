@@ -121,31 +121,14 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        if (document.querySelectorAll('.slime').length == 33) {
-            setTimeout(function() { alert('You have consumed the whole block. Next step, the world. Congats.')}, 100)
-        } else if (document.querySelectorAll('.slime').length > 33) {
-            setTimeout(function() { alert('You ate the human but also ate your own toxic self. You are dead.')}, 100)
-            setTimeout(function(){ 
-                const retry = confirm('Would you like to try again?')
-                
-                if (retry == true) {
-                    restart()
-                }
-            }, 200)
+        if (document.querySelectorAll('.slime').length == 23) {
+            setTimeout(function() { window.location.href = "second-level.html"}, 200)
+        } else if (document.querySelectorAll('.slime').length > 23) {
+            setTimeout(function() { window.location.href = "game-over.html"}, 200)
         } else {
-            setTimeout(function() { alert('You did not cover the whole area so the humans were able to defeat you.')}, 100)
-            setTimeout(function(){ 
-                const retry = confirm('Would you like to try again?')
-                
-                if (retry == true) {
-                    restart()
-                }
-            }, 200)
+            setTimeout(function() { window.location.href = "game-over2.html"}, 200)
         }
     }
-    // if (isSlimeThere(x, y)) {
-    //     alert('Game Over')
-    // }
 }
 
 
