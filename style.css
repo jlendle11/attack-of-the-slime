@@ -111,6 +111,11 @@ body {
     /* img-source: https://opengameart.org/content/street-view */
     background-image: url("images/way.png");
 }
+
+.twoBoard {
+    height: 600px;
+    width: 600px;
+}
     
 
 .slime {
@@ -212,6 +217,7 @@ body {
     padding-top: 8px;
     padding-bottom: 8px;
 }
+
 
 /* Music sources: https://www.youtube.com/watch?v=POOBhJIQBIU&t=736s 
 https://www.youtube.com/watch?v=Mr9T-943BnE

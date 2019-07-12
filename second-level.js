@@ -1,8 +1,9 @@
 const slime = { x: 0, y: 0 }
-const humans = { x: 4, y: 4 }
+const humans = { x: 5, y: 5 }
 const cars = [
-    { x: 3, y: 1},
-    { x: 3, y: 2}
+    { x: 4, y: 3},
+    { x: 1, y: 2},
+    { x: 5, y: 3}
 ]
 const restart = function() {
 	window.location.reload();
@@ -77,7 +78,7 @@ const isSlimeThere = function(x, y) {
 }
 
 const isMoveOnBoard = function(x, y) {
-    if (x < 0 || y < 0 || x > 4 || y > 4) {
+    if (x < 0 || y < 0 || x > 5 || y > 5) {
         return false
     }
     return true
@@ -120,10 +121,9 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        if (document.querySelectorAll('.slime').length == 23) {
+        if (document.querySelectorAll('.slime').length == 33) {
             setTimeout(function() { alert('You have consumed the whole block. Next step, the world. Congats.')}, 100)
-            setTimeout(function() { window.location.href = "second-level.html"}, 200)
-        } else if (document.querySelectorAll('.slime').length > 23) {
+        } else if (document.querySelectorAll('.slime').length > 33) {
             setTimeout(function() { alert('You ate the human but also ate your own toxic self. You are dead.')}, 100)
             setTimeout(function(){ 
                 const retry = confirm('Would you like to try again?')
