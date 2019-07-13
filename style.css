@@ -187,6 +187,11 @@ body {
     background-repeat: no-repeat;
 }
 
+.win-back {
+    /* image-source: https://giphy.com/gifs/gustavo-animation-kidmograph-8-bit-wkIjXcG2DnfZ6 */
+    background-image: url("images/giphy.gif")
+}
+
 .info-display {
     background-image: url("images/brick.png");
     height: 500px;

@@ -121,10 +121,10 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        if (document.querySelectorAll('.slime').length == 23) {
+        if (document.querySelectorAll('.slime').length == 33) {
+            setTimeout(function() { window.location.href = "win.html"}, 200)
+        } else if (document.querySelectorAll('.slime').length > 33) {
             setTimeout(function() { window.location.href = "second-level.html"}, 200)
-        } else if (document.querySelectorAll('.slime').length > 23) {
-            setTimeout(function() { window.location.href = "game-over.html"}, 200)
         } else {
             setTimeout(function() { window.location.href = "game-over2.html"}, 200)
         }
