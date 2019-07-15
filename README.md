@@ -2,6 +2,7 @@
 -A puzzle game.
 
 **domain**: - [My Game](https://jlendle11.github.io/attack-of-the-slime/ "ATTACK OF THE SLIME")
+**screenshot1**: - ![homepage](images/Game home screen.png)
 
 ## Description and user story
 -This is a basic 'fill the board' puzzle game. You play a green slime, who needs to consume humans to survive, covering everything in slime on the way. I've always enjoyed 'fill the board' puzzle games so this is my take on it.
