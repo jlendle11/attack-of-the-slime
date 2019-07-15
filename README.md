@@ -1,30 +1,21 @@
 # title
 -ATTACK OF THE SLIME - puzzle game
 
-**domain**: - insert the domain to your project
+**domain**: - [My Game](https://jlendle11.github.io/attack-of-the-slime/ "ATTACK OF THE SLIME")
 
 ## description and user story
--what is the project?
--why this project for you?
--how would a user (not you) approach this project if using it in the wild (i.e. how would a player play your game).
+-This is a basic 'fill the board' puzzle game. You play a green slime, who needs to consume humans to survive, covering everything in slime on the way. I've always enjoyed 'fill the board' puzzle games so this is my take on it.
 
 ## technologies & packages
--e.g. ‘vanilla js, css,.....’ any packages installed, etc.
+- vanilla JS, CSS, HTML5, NPM, ESLINT
 
 ## launch/build
--how do run the game for users who clone your repo
--normally something like `npm install` then `npm run start` for this type of vanilla project.
+-To run the game simply open the game folder in your preferred text editor, right click on index.html, and open it in your preferred browser
 
 ## major problems & solutions
--put the tough stuff that you got through here
+-Setting the win condition, getting the next level to load after said win condition is met.
+
 
 ## MVP
--describe MVP
--describe what you were able to accomplish post-mvp
--describe stretch goals, wips, next steps (this can be a separate heading if you want)
-
-## FUTURE -> databases and relations; APIs; component library
--you don’t need to include this now, but options for your future readmes ya know
-
-## _code snippet_
-- insert one or two code snippets and explain what you were trying to solve with this snippet
+-Complete game with main menu, working levels, and end screens, good and bad. 
+-I plan on adding a tutorial page, more levels, and cleaner code.
