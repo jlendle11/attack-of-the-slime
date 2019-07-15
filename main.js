@@ -7,6 +7,34 @@ const cars = [
 const restart = function() {
 	window.location.reload();
 }
+//Tutorial/walkthrough for fade effect: "https://christopheraue.net/design"
+fadeInPage()
+function fadeInPage() {
+    const fader = document.getElementById('fader')
+    fader.classList.add('fade-out')
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let anchors = document.getElementsByTagName('a')
+    for (let i = 0; i < anchors.length; i += 1) {
+        if (anchors[i].hostname !== window.location.hostname) {
+            continue
+        }
+        anchors[i].addEventListener('click', function(event) {
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href
+                fader.removeEventListener('animationend', listener)
+            };
+            fader.addEventListener('animationend', listener)
+            
+            event.preventDefault();
+            fader.classList.add('fade-in')
+        })
+    }
+})
 
 function createCars() {
     for (const car of cars) {
@@ -79,9 +107,6 @@ const canMoveTo = function(x, y) {
     if (carAtLoc(x, y)) {
         return false
     }
-    // if (isSlimeThere(x, y)) {
-    //     return false
-    // }
     return true
 }
 
@@ -93,30 +118,13 @@ function moveSlime(x, y) {
         removeHuman(x, y)
         createHuman()
         if (document.querySelectorAll('.slime').length == 23) {
-            setTimeout(function() { alert('You have consumed the whole block. Next step, the world. Congats.')}, 100)
+            setTimeout(function() { window.location.href = "second-level.html"}, 200)
         } else if (document.querySelectorAll('.slime').length > 23) {
-            setTimeout(function() { alert('You ate the human but also ate your own toxic self. You are dead.')}, 100)
-            setTimeout(function(){ 
-                const retry = confirm('Would you like to try again?')
-                
-                if (retry == true) {
-                    restart()
-                }
-            }, 200)
+            setTimeout(function() { window.location.href = "game-over.html"}, 200)
         } else {
-            setTimeout(function() { alert('You did not cover the whole area so the humans were able to defeat you.')}, 100)
-            setTimeout(function(){ 
-                const retry = confirm('Would you like to try again?')
-                
-                if (retry == true) {
-                    restart()
-                }
-            }, 200)
+            setTimeout(function() { window.location.href = "game-over2.html"}, 200)
         }
     }
-    // if (isSlimeThere(x, y)) {
-    //     alert('Game Over')
-    // }
 }
 
 
@@ -190,6 +198,14 @@ document.body.addEventListener('keydown', function(evt) {
 const replay = function() {
 
 }
+function levelTwo() {
+    const x = document.getElementById("next-level");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 function runGame() {
     createCars()
