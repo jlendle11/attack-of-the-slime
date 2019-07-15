@@ -224,9 +224,11 @@ body {
 }
 
 
-/* Music sources: https://www.youtube.com/watch?v=POOBhJIQBIU&t=736s 
-https://www.youtube.com/watch?v=Mr9T-943BnE
-https://www.youtube.com/watch?v=h7T6ZNgoP5M&t*/
+/* Music sources: 
+Nature sounds - Rain: https://www.youtube.com/watch?v=Mr9T-943BnE
+Zelda - Dungeon theme: https://www.youtube.com/watch?v=h7T6ZNgoP5M&t
+Halo 3 - Main menu theme: https://www.youtube.com/watch?v=uXcWxw7UHME&t=28s
+Queen - We Are The Champions: https://www.youtube.com/watch?v=Jmd4OLzhQw0*/
 #music {
     visibility: hidden;
 }
