@@ -8,7 +8,7 @@ const cars = [
 const restart = function() {
 	window.location.reload();
 }
-//Tutorial for fade effect: "https://christopheraue.net/design"
+//Tutorial/walkthrough for fade effect: "https://christopheraue.net/design"
 fadeInPage()
 function fadeInPage() {
     const fader = document.getElementById('fader')
@@ -17,11 +17,11 @@ function fadeInPage() {
 
 document.addEventListener('DOMContentLoaded', function() {
     let anchors = document.getElementsByTagName('a')
-    for (let idx=0; idx<anchors.length; idx+=1) {
-        if (anchors[idx].hostname !== window.location.hostname) {
+    for (let i = 0; i < anchors.length; i += 1) {
+        if (anchors[i].hostname !== window.location.hostname) {
             continue
         }
-        anchors[idx].addEventListener('click', function(event) {
+        anchors[i].addEventListener('click', function(event) {
             var fader = document.getElementById('fader'),
                 anchor = event.currentTarget;
             
@@ -68,11 +68,12 @@ const isHuman = function(x, y) {
     return false
 }
 
-const isSlimeThere = function(x, y) {
-    const cln = document.querySelectorAll('#clone')
-
-    if (cln.x == x && cln.y == y) {
-        return true
+function isSlimeThere(x, y) {   
+    if (document.querySelectorAll('#clone.slime').length) {
+        if (document.querySelectorAll('#clone').x == document.querySelector('.slime').x && document.querySelectorAll('#clone').y == document.querySelector('.slime').y) {            
+            return true
+        }
+            return false
     }
     return false
 }
@@ -108,9 +109,6 @@ const canMoveTo = function(x, y) {
     if (carAtLoc(x, y)) {
         return false
     }
-    // if (isSlimeThere(x, y)) {
-    //     return false
-    // }
     return true
 }
 

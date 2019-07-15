@@ -4,7 +4,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+h2 {
+    text-align: center;
+}
 .homescreen {
     display: flex;
     justify-content: center;
@@ -64,7 +66,11 @@ body {
     height: 400px;
     animation: pulse 3s infinite;
     animation-direction: alternate;
+}
 
+sub-title {
+    text-align: center;
+    align-content: center;
 }
 
 @keyframes pulse {

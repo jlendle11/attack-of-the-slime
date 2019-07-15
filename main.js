@@ -7,7 +7,7 @@ const cars = [
 const restart = function() {
 	window.location.reload();
 }
-//Tutorial for fade effect: "https://christopheraue.net/design"
+//Tutorial/walkthrough for fade effect: "https://christopheraue.net/design"
 fadeInPage()
 function fadeInPage() {
     const fader = document.getElementById('fader')
@@ -16,11 +16,11 @@ function fadeInPage() {
 
 document.addEventListener('DOMContentLoaded', function() {
     let anchors = document.getElementsByTagName('a')
-    for (let idx=0; idx<anchors.length; idx+=1) {
-        if (anchors[idx].hostname !== window.location.hostname) {
+    for (let i = 0; i < anchors.length; i += 1) {
+        if (anchors[i].hostname !== window.location.hostname) {
             continue
         }
-        anchors[idx].addEventListener('click', function(event) {
+        anchors[i].addEventListener('click', function(event) {
             var fader = document.getElementById('fader'),
                 anchor = event.currentTarget;
             
@@ -107,9 +107,6 @@ const canMoveTo = function(x, y) {
     if (carAtLoc(x, y)) {
         return false
     }
-    // if (isSlimeThere(x, y)) {
-    //     return false
-    // }
     return true
 }
 
