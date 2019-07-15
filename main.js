@@ -1,9 +1,9 @@
-const slime = { x: 0, y: 0 }
-const humans = { x: 4, y: 4 }
-const cars = [
-    { x: 3, y: 1},
-    { x: 3, y: 2}
-]
+// const slime = { x: 0, y: 0 }
+// const humans = { x: 4, y: 4 }
+// const cars = [
+//     { x: 3, y: 1},
+//     { x: 3, y: 2}
+// ]
 const restart = function() {
 	window.location.reload();
 }

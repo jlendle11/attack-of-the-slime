@@ -1,9 +1,13 @@
 const slime = { x: 0, y: 0 }
 const humans = { x: 5, y: 5 }
 const cars = [
-    { x: 4, y: 3},
-    { x: 1, y: 2},
-    { x: 5, y: 3}
+    { x: 0, y: 3},
+    { x: 0, y: 1},
+    { x: 0, y: 2},
+    { x: 1, y: 1},
+    { x: 2, y: 1},
+    { x: 3, y: 3},
+    { x: 4, y: 5}
 ]
 const restart = function() {
 	window.location.reload();
@@ -119,9 +123,9 @@ function moveSlime(x, y) {
     if (isHuman(x, y)) {
         removeHuman(x, y)
         createHuman()
-        if (document.querySelectorAll('.slime').length == 33) {
-            setTimeout(function() { window.location.href = "third-level.html"}, 200)
-        } else if (document.querySelectorAll('.slime').length > 33) {
+        if (document.querySelectorAll('.slime').length == 29) {
+            setTimeout(function() { window.location.href = "win.html"}, 200)
+        } else if (document.querySelectorAll('.slime').length > 29) {
             setTimeout(function() { window.location.href = "game-over.html"}, 200)
         } else {
             setTimeout(function() { window.location.href = "game-over2.html"}, 200)
