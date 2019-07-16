@@ -14,5 +14,8 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
+    'no-plusplus': 'off',
+    'generators': 'off',
+    'func-names': 'off'
   },
 };
